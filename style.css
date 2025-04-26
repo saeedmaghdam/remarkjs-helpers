@@ -94,6 +94,63 @@ li {
   white-space: nowrap; /* Prevents wrapping */
 }
 
+/* Custom background for branding */
+.remark-slide-content {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.remark-slide-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 15% 85%, rgba(0, 119, 255, 0.06) 0%, transparent 25%),
+    radial-gradient(circle at 85% 15%, rgba(100, 149, 237, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
+  z-index: -1;
+}
+
+/* Add subtle pattern */
+.remark-slide-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233498db' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 20L20 0h10L0 30v-10zm0 10L30 0h10L0 40v-10z'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: -1;
+}
+
+/* Enhance headings */
+.remark-slide-content h1 {
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+/* Add subtle border */
+.remark-slide {
+  border: 12px solid transparent;
+  border-image: linear-gradient(to bottom right, #3498db33, #9b59b633) 1;
+  box-sizing: border-box;
+}
+/* Your personal brand corner element */
+.remark-slide-content.center.middle::after {
+  content: "S";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(52, 152, 219, 0.2);
+  font-family: 'Arial', sans-serif;
+  z-index: 1;
+}
+
 /* Print styles for PDF generation */
 @media print {
   .remark-slide-scaler {
