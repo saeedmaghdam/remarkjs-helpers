@@ -151,6 +151,10 @@ li {
   z-index: 1;
 }
 
+img.logo {
+  width: 37%;
+}
+
 /* Print styles for PDF generation */
 @media print {
   .remark-slide-scaler {
